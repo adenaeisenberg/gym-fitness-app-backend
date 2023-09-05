@@ -12,8 +12,7 @@ class WorkoutsController < ApplicationController
   def create
     @workout = Workout.create(
       user_id: current_user.id,
-      exercise_id: params[:exercise_id],
-      reps: params[:reps],
+      title: params[:title],
     )
     render json: @workout
   end
