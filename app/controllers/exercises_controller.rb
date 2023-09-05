@@ -16,5 +16,6 @@ class ExercisesController < ApplicationController
       image_url: params[:image_url],
       video_url: params[:video_url],
     )
+    render json: @exercise
   end
 end
