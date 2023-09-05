@@ -4,6 +4,11 @@ class RoutinesController < ApplicationController
     render json: @routines
   end
 
+  def show
+    @routine = Routine.find_by(id: params[:id])
+    render json: @routine
+  end
+
   def create
     @routine = Routine.create(
       user_id: current_user.id,
