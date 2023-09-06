@@ -13,6 +13,7 @@ class RoutinesController < ApplicationController
 
   def create
     @routine = Routine.create(
+      user_id: current_user.id,
       workout_id: params[:workout_id],
       exercise_id: params[:exercise_id],
       reps: params[:reps],

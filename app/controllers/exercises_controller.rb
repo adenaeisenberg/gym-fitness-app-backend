@@ -1,13 +1,13 @@
 class ExercisesController < ApplicationController
-  before_action :authenticate_user
+  before_action :authenticate_user, except: [:index, :show]
 
   def index
-    @exercises = current_user.exercises.all
+    @exercises = Exercise.all
     render json: @exercises
   end
 
   def show
-    @exercise = current_user.exercises.find_by(id: params[:id])
+    @exercise = Exercise.find_by(id: params[:id])
     render json: @exercise
   end
 

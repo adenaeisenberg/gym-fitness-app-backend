@@ -1,3 +1,3 @@
 class Exercise < ApplicationRecord
-  has_many :workout, through: :routines
+  has_many :workouts, :through => :routines
 end
