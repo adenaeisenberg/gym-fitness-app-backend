@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  post "/users" => "users#create"
+  post "/sessions" => "sessions#create"
+
   get "/exercises" => "exercises#index"
   get "/exercises/:id" => "exercises#show"
   post "/exercises" => "exercises#create"
@@ -7,7 +10,7 @@ Rails.application.routes.draw do
   get "/workouts/:id" => "workouts#show"
   post "/workouts" => "workouts#create"
 
-  post "/users" => "users#create"
-
-  post "/sessions" => "sessions#create"
+  get "/routines" => "routines#index"
+  get "/routines/:id" => "routines#show"
+  post "/routines" => "routines#create"
 end
