@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   get "/exercises/:id" => "exercises#show"
   post "/exercises" => "exercises#create"
 
-  get "/workouts" => "workouts#index"
+  get "/workouts" => "workouts#index" #GETTING ERROR
   get "/workouts/:id" => "workouts#show"
   post "/workouts" => "workouts#create"
 
