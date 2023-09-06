@@ -6,11 +6,11 @@ Rails.application.routes.draw do
   get "/exercises/:id" => "exercises#show"
   post "/exercises" => "exercises#create"
 
-  get "/workouts" => "workouts#index" #GETTING ERROR
+  get "/workouts" => "workouts#index"
   get "/workouts/:id" => "workouts#show"
   post "/workouts" => "workouts#create"
 
-  get "/routines" => "routines#index"
-  get "/routines/:id" => "routines#show"
+  # get "/routines" => "routines#index"
+  # get "/routines/:id" => "routines#show"
   post "/routines" => "routines#create"
 end

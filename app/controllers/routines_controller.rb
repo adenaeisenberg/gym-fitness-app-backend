@@ -1,15 +1,15 @@
 class RoutinesController < ApplicationController
   before_action :authenticate_user
 
-  def index
-    @routines = current_user.routines.all
-    render json: @routines
-  end
+  # def index
+  #   @routines = current_user.routines.all
+  #   render json: @routines
+  # end
 
-  def show
-    @routine = current_user.routines.find_by(id: params[:id])
-    render json: @routine
-  end
+  # def show
+  #   @routine = current_user.routines.find_by(id: params[:id])
+  #   render json: @routine
+  # end
 
   def create
     @routine = Routine.create(
