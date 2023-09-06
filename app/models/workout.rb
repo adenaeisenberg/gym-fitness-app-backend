@@ -1,3 +1,3 @@
 class Workout < ApplicationRecord
-  belongs_to :user
+  workout has_many :exercises, through: :routines
 end
