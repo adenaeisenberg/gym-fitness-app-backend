@@ -3,12 +3,14 @@ class WorkoutsController < ApplicationController
 
   def index
     @workouts = current_user.workouts.all
-    render json: @workouts
+    render :index
+    # render json: @workouts
   end
 
   def show
     @workout = current_user.workouts.find_by(id: params[:id])
-    render json: @workout
+    # render json: @workout
+    render :show
   end
 
   def create
