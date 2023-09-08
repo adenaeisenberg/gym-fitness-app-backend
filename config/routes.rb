@@ -8,9 +8,9 @@ Rails.application.routes.draw do
 
   get "/workouts" => "workouts#index" # FE
   get "/workouts/:id" => "workouts#show" # FE
-  post "/workouts" => "workouts#create" 
+  post "/workouts" => "workouts#create" # FE
 
   # get "/routines" => "routines#index"
   # get "/routines/:id" => "routines#show"
-  post "/routines" => "routines#create"
+  post "/routines" => "routines#create" # FE
 end
