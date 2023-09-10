@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+# root to: "workouts#index" 
+
   post "/users" => "users#create" # FE
   post "/sessions" => "sessions#create" # FE
 
